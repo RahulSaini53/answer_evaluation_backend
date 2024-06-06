@@ -25,7 +25,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['project_backend5.com', 'www.project_backend5.com']
+ALLOWED_HOSTS = ['https://project-backend5-672ed2a9791e.herokuapp.com/', 'www.https://project-backend5-672ed2a9791e.herokuapp.com/']
 
 
 # Application definition
