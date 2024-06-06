@@ -86,7 +86,6 @@ def Synonyms(word):
 '''~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Stop Word ~~~~~~~~~~~~'''    
 f = open(r"C:\Users\rksck\Desktop\major project2\backend\project_backend\CodeFolder\stop_word.txt","r")
 stop_word = set(f.readline().split(" "))
-# print(stop_word)
 
 '''~~~~~~~~~~~~~~~~~Calculate Maximum comparision Score of a Solution Sentence~~~~~~~~~~~~~~ '''
 
@@ -131,8 +130,7 @@ def find_Comp_Score(Ssen , Answer, Csim_upper , Csim_lower):# one solution sente
 
         Sd = calculate_cosine_similarity(Ssen , Asen)  # recheck it
         Sw = Sd  # recheck it
-        # print(Sd)
-
+     
         Ccs = 0
         if Sd >= Csim_upper:
             Sw = Sd
@@ -158,7 +156,6 @@ def NLP_Predict_Score(Solution , Answer , maximum_marks , Cosine_sililarty_lower
     grammarly_wrong=0
     # Grammarly Correct the Answer of Student and also count how many sentences are wrong
     grammarly_wrong = correct_grammar(Answer)
-    print("Number of Grammarly Wrong sentences in Your Answer = ",grammarly_wrong)
 
     Os = 0
     Mkp = 0

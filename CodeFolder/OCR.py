@@ -28,5 +28,3 @@ def image_to_text(image_path):
     corrected_text = ' '.join(corrected_text)
 
     return corrected_text
-
-# print(image_to_text("solution.png"))

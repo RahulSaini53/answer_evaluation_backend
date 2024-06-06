@@ -83,7 +83,5 @@ total =  mean_absolute_error(y_test, y_pred_nlp)
 
 nlp_error = ceil(mean_absolute_error(y_test, y_pred_nlp)*100)/100
 
-print("Mean Absolute Error in ML model: = ", ml_error)
-print("Mean Absolute Error in NLP module: = ", nlp_error)
 
 '''

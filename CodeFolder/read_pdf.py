@@ -16,4 +16,3 @@ def read_pdf(file_path):
 # Example usage:
 file_path = r'C:\Users\rksck\Desktop\major project2\backend\project_backend\Media\uploads\1.pdf'  # Replace with your PDF file path
 pdf_text = read_pdf(file_path)
-print(pdf_text)

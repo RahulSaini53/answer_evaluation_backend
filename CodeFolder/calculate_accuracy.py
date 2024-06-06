@@ -75,8 +75,7 @@ def fun(X,y):
 
     nlp_error = mean_absolute_error(y_test, y_pred_nlp)
 
-    # print("Mean Absolute Error in ML model: = ", ml_error)
-    # print("Mean Absolute Error in NLP module: = ", nlp_error)
+    
     y_final = []
     for i in range(len(y_pred)):
         y_final.append(Adjust_Score(y_pred[i] , y_pred_nlp[i]))
@@ -116,7 +115,6 @@ for xi, yi in zip(x, y2):
     plt.text(xi + bar_width, yi + 0.5, str(yi), ha='center', va='bottom', color='black')
 
 
-# print(y_total)
 plt.xlabel('Data Size-(Data split = 90% training , 10% testing)')
 plt.ylabel('Accuracy')
 plt.title('Data Size v/s Accuracy Analysis')
