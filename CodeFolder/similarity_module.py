@@ -100,13 +100,13 @@ def find_Comp_Score(Ssen , Answer, Csim_upper , Csim_lower):# one solution sente
     CS_current = 0
     KP = 1 # keyword penality
 
-    return 2,3
+    # return 2,3
 
     Ssen_Synm_group = []
-    for w in T_Ssen:
-        w_s  = Synonyms(w)
-        w_s.add(w)
-        Ssen_Synm_group.append(w_s)
+    # for w in T_Ssen:
+    #     w_s  = Synonyms(w)
+    #     w_s.add(w)
+    #     Ssen_Synm_group.append(w_s)
 
     
 
