@@ -1,7 +1,6 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .serializer import FileUploadSerializer
-from CodeFolder import process_data
 import time
 import os
 from django.conf import settings
@@ -9,24 +8,6 @@ from rest_framework import status
 from CodeFolder.main import Get_score
 from CodeFolder.OCR import image_to_text
 
-
-@api_view(['GET', 'POST'])
-def dataprocess(request):
-    if request.method == 'GET':
-        num=request.data
-   
-        return Response({'msg':'your get request was successful'})
-    if request.method == 'POST':
-        strings=request.data
-     
-        str1 = strings.getlist('solution')[0]
-        str2 = strings.getlist('answer')[0]
-      
-        output=process_data.compare_data(str1,str2)
-  
-        time.sleep(5)
-        return Response(output)
-    
     
 @api_view(['GET', 'POST'])
 def ExtendedDataprocess(request):
