@@ -59,7 +59,7 @@ def ExtendedDataprocess(request):
 
             output = Get_score(solution, answer)
 
-            return Response({'msg': 'Your post request was successful'})
+            # return Response({'msg': 'Your post request was successful'})
 
             return Response({'output': output, 'solution': solution, 'answer': answer}, status=status.HTTP_201_CREATED)
 

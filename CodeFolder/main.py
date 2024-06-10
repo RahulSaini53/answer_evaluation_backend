@@ -16,9 +16,10 @@ def Get_score(solution,answer):
     # '''Student Answer'''
     # answer = "I am MNITian Student"
 
-    ml_score = ML_Predict_Score(solution , answer)
-    # nlp_score = NLP_Predict_Score(solution, answer, maximum_marks, Cosine_sililarty_lower, Cosine_sililarty_upper)
-    nlp_score=5
+    # ml_score = ML_Predict_Score(solution , answer)
+    ml_score=7
+    nlp_score = NLP_Predict_Score(solution, answer, maximum_marks, Cosine_sililarty_lower, Cosine_sililarty_upper)
+    # nlp_score=5
   
     
     score = Adjust_Score(ml_score , nlp_score*10) # becase 0<=nlp_score<=10 , but 0<=ml_score<=100)
