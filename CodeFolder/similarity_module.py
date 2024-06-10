@@ -153,6 +153,8 @@ def find_Comp_Score(Ssen , Answer, Csim_upper , Csim_lower):# one solution sente
 '''~~~~~~~~~~~Predict the Marks of Answer according to similarity with Solution~~~~~~~~~~~~~~'''
 def NLP_Predict_Score(Solution , Answer , maximum_marks , Cosine_sililarty_lower , Cosine_sililarty_upper):
 
+    return 10
+
     Solution = split_paragraph_into_sentences(Solution) # list of answers sentences
     Answer = split_paragraph_into_sentences(Answer) # list of answers sentences
     grammarly_wrong=0
