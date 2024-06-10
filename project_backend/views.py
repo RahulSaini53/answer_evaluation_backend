@@ -19,7 +19,7 @@ def ExtendedDataprocess(request):
 
     if request.method == 'POST':
         serializer = FileUploadSerializer(data=request.data)
-        
+        return Response({'msg': 'Your post request was successful'})
         if serializer.is_valid():
             image = serializer.validated_data.get('image', None)
             solutionimage = serializer.validated_data.get('solutionimage', None)
