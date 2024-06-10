@@ -82,7 +82,7 @@ DATABASES = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    'https://answer-sheet-evaluation-system.vercel.app/',
+    'https://answer-sheet-evaluation-frontend.vercel.app',
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
