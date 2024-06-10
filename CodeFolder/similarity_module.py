@@ -169,7 +169,7 @@ def NLP_Predict_Score(Solution , Answer , maximum_marks , Cosine_sililarty_lower
     for s in Answer:
        length+=len(s)
 
-    return 10
+    
 
     for Ssen in Solution:
         Comparision_Score , KP = find_Comp_Score(Ssen,Answer,Cosine_sililarty_upper, Cosine_sililarty_lower)
@@ -180,6 +180,7 @@ def NLP_Predict_Score(Solution , Answer , maximum_marks , Cosine_sililarty_lower
      
            
 
+    return 10
     Mkp = Mkp/len(Solution)
     if count:
         Os = Os/count
