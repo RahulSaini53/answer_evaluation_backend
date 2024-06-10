@@ -56,9 +56,10 @@ def ExtendedDataprocess(request):
                     else:
                         answer = image_to_text(file_path)
 
-            return Response({'msg': 'Your post request was successful'})
 
             output = Get_score(solution, answer)
+
+            return Response({'msg': 'Your post request was successful'})
 
             return Response({'output': output, 'solution': solution, 'answer': answer}, status=status.HTTP_201_CREATED)
 

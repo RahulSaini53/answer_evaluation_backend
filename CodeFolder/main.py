@@ -34,7 +34,7 @@ def Get_score(solution,answer):
 
     final_score = floor_v + fr
 
-
+    print(final_score)
     return final_score
 
 
