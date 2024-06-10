@@ -24,7 +24,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'fallback-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = ['project-backend5-672ed2a9791e.herokuapp.com/', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','project-backend5-672ed2a9791e.herokuapp.com']
 
 
 # Application definition
