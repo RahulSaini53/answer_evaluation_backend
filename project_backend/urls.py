@@ -27,6 +27,7 @@ router=DefaultRouter()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',views.first_page),
     path('',include(router.urls)),
     path('ExtendedDataprocessapi/',views.ExtendedDataprocess,name='ExtendedDataprocessapi')
 ]

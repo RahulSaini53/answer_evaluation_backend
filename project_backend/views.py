@@ -1,4 +1,5 @@
 from rest_framework.response import Response
+from django.http import HttpResponse
 from rest_framework.decorators import api_view
 from .serializer import FileUploadSerializer
 import os
@@ -6,6 +7,10 @@ from django.conf import settings
 from rest_framework import status
 from CodeFolder.main import Get_score
 from CodeFolder.OCR import image_to_text
+
+
+def first_page(request):
+    return HttpResponse('you have successfully deployed your app')
 
 @api_view(['GET', 'POST'])
 def ExtendedDataprocess(request):
