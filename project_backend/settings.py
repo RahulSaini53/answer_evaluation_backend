@@ -133,3 +133,29 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'Media')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import nltk
+
+nltk_data_path = os.path.join(BASE_DIR, 'nltk_data')
+
+# Ensure the nltk_data directory exists
+if not os.path.exists(nltk_data_path):
+    os.makedirs(nltk_data_path)
+
+nltk.data.path.append(nltk_data_path)
+
+# Download the required corpora
+nltk_packages = [
+    'names',
+    'stopwords',
+    'punkt',
+    'averaged_perceptron_tagger',
+    'maxent_ne_chunker',
+    'words',
+]
+
+for package in nltk_packages:
+    try:
+        nltk.download(package, download_dir=nltk_data_path)
+    except:
+        pass  # Handle exceptions or log errors as needed
