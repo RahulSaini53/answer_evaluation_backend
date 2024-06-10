@@ -20,7 +20,7 @@ def Get_score(solution,answer):
     nlp_score = NLP_Predict_Score(solution, answer, maximum_marks, Cosine_sililarty_lower, Cosine_sililarty_upper)
   
 
-    score = Adjust_Score(ml_score , nlp_score*10) # becase 0<=nlp_score<=10 , but 0<=ml_score<=100)
+    # score = Adjust_Score(ml_score , nlp_score*10) # becase 0<=nlp_score<=10 , but 0<=ml_score<=100)
     score = score/10 # setting score range between 0 to 10 
     
     floor_v = int(score)
