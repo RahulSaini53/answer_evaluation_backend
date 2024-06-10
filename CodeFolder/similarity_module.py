@@ -84,8 +84,10 @@ def Synonyms(word):
     return s1
 
 '''~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Stop Word ~~~~~~~~~~~~'''    
-f = open(r"C:\ Users\ rksck\Desktop\ major project2\backend\ project_backend\ CodeFolder\stop_word.txt","r")
-stop_word = set(f.readline().split(" "))
+
+str1='''weren't on just such each mustn't for no being shan't needn't at don wasn't having by because into been are do hasn't now between any than aren't did doing isn't same should or mightn't were does if from in so some other off should've here out down doesn't while shouldn't won't an only not there all a will mightn up as has few through with can don't was is had how didn and hadn't until then more when why couldn't of but too wouldn't didn't have haven't be where nor am to the about most 
+ '''
+stop_word = set(str1.split(" "))
 
 '''~~~~~~~~~~~~~~~~~Calculate Maximum comparision Score of a Solution Sentence~~~~~~~~~~~~~~ '''
 
