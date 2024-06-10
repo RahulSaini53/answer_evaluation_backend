@@ -7,12 +7,19 @@ from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
+import os
 
 from CodeFolder.similarity_module import NLP_Predict_Score # import from similarity module
 from CodeFolder.adjust_score import Adjust_Score
 
 # Load data (solution, answer, and grade)
-data = pd.read_csv(r'C:\Users\rksck\Desktop\major project2\backend\project_backend\CodeFolder\data1.csv')
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Update the path to use the BASE_DIR
+data_file_path = os.path.join(BASE_DIR, 'CodeFolder', 'data1.csv')
+
+data = pd.read_csv(data_file_path)
 
 # Split data into features (solution and answer) and label (grade)
 X = data[['solution', 'answer']]
