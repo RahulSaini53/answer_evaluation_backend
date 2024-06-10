@@ -10,7 +10,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 from textblob import Word
-from language_tool_python import LanguageTool
+# from language_tool_python import LanguageTool
 from typing import List
 
 '''~~~~~~~~~~~~~~~~~~~~~~~Stemming of word~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'''
@@ -20,20 +20,20 @@ def stemming(w):
     return ps.stem(w)
 
 '''~~~~~~~~~~~~~~~~~~~~~~~~~~~Grammar Error detection Part~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ '''
-def correct_grammar(sentences :List[str]):
-    tool = LanguageTool('en-US')
+# def correct_grammar(sentences :List[str]):
+#     tool = LanguageTool('en-US')
 
-    # Check grammar and get corrections
-    wrong = 0
-    for i in range(len(sentences)):
-        matches = tool.check(sentences[i])
-        if len(matches) <= 1: # may be one word is wrong just ignore it
-            continue
-        # Apply corrections
-        sentences[i] = tool.correct(sentences[i])
-        wrong += 1
+#     # Check grammar and get corrections
+#     wrong = 0
+#     for i in range(len(sentences)):
+#         matches = tool.check(sentences[i])
+#         if len(matches) <= 1: # may be one word is wrong just ignore it
+#             continue
+#         # Apply corrections
+#         sentences[i] = tool.correct(sentences[i])
+#         wrong += 1
 
-    return wrong
+#     return wrong
 
 
 '''~~~~~~~~~~~~~~~~~~~~~~~~~~~~Spelling Correction Part~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'''
@@ -157,7 +157,7 @@ def NLP_Predict_Score(Solution , Answer , maximum_marks , Cosine_sililarty_lower
     Answer = split_paragraph_into_sentences(Answer) # list of answers sentences
     grammarly_wrong=0
     # Grammarly Correct the Answer of Student and also count how many sentences are wrong
-    grammarly_wrong = correct_grammar(Answer)
+    # grammarly_wrong = correct_grammar(Answer)
 
     Os = 0
     Mkp = 0
