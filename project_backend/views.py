@@ -19,7 +19,7 @@ def ExtendedDataprocess(request):
 
     if request.method == 'POST':
         serializer = FileUploadSerializer(data=request.data)
-        return Response({'msg': 'Your post request was successful'})
+        
         if serializer.is_valid():
             image = serializer.validated_data.get('image', None)
             solutionimage = serializer.validated_data.get('solutionimage', None)
@@ -55,6 +55,8 @@ def ExtendedDataprocess(request):
                             answer = f.read()
                     else:
                         answer = image_to_text(file_path)
+
+            return Response({'msg': 'Your post request was successful'})
 
             output = Get_score(solution, answer)
 
