@@ -12,7 +12,6 @@ fonttools==4.51.0
 idna==3.7
 joblib==1.4.2
 kiwisolver==1.4.5
-language-tool-python==2.8
 matplotlib==3.8.4
 nltk==3.8.1
 numpy==1.26.4
