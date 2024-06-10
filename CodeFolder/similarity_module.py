@@ -106,6 +106,9 @@ def find_Comp_Score(Ssen , Answer, Csim_upper , Csim_lower):# one solution sente
         w_s.add(w)
         Ssen_Synm_group.append(w_s)
 
+    
+    return 2,3
+
     for Asen in Answer:
         
         T_Asen = word_tokenize(Asen)
@@ -180,7 +183,7 @@ def NLP_Predict_Score(Solution , Answer , maximum_marks , Cosine_sililarty_lower
      
            
 
-    return 10
+    
     Mkp = Mkp/len(Solution)
     if count:
         Os = Os/count
