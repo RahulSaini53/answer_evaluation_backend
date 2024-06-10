@@ -84,7 +84,7 @@ def Synonyms(word):
     return s1
 
 '''~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Stop Word ~~~~~~~~~~~~'''    
-f = open(r"C:\Users\rksck\Desktop\major project2\backend\project_backend\CodeFolder\stop_word.txt","r")
+f = open(r"C:\ Users\ rksck\Desktop\ major project2\backend\ project_backend\ CodeFolder\stop_word.txt","r")
 stop_word = set(f.readline().split(" "))
 
 '''~~~~~~~~~~~~~~~~~Calculate Maximum comparision Score of a Solution Sentence~~~~~~~~~~~~~~ '''
